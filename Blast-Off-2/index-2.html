@@ -1,0 +1,107 @@
+<!--Skylar Baumgartner-->
+<!--Start with the doc type tab which will tell the browser what type of doc and version of HTML-->
+<!DOCTYPE html>
+<!-- First we put in the html tag that start and end the document -->
+<!-- The page starts here -->
+<html>
+    <!--The head tag contains information about the page. The head tag holds usually Non-Displayable items.-->
+    <head>
+        <!-- The title tabs hold the title for the page in the tabs browser -->
+     <title> Blast Off! </title>
+        <!--This is so that the website can refer back to the folder of style.css that is to the side! I learned to do this to change the background color of the webpage from YouTube-->
+     <link rel="stylesheet" href="style.css" />
+        <!--In this style we have a border thatll surround our list of ships later on, and we are adding in a colored box model for the title to the list of ships, we also centered all text, and we will be adding in a button to go to our last casino page to play the game!  -->
+     <style>
+            .button {
+             background-color: #95fffa; /* Green */
+             border: none;
+             color: rgb(196, 2, 255);
+             padding: 16px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-size: 16px;
+             margin: 4px 2px;
+             transition-duration: 0.4s;
+             cursor: pointer;}
+                .button {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                background-color: rgb(94, 255, 247); 
+                color: rgb(204, 0, 255); 
+                border: 2px solid #60f3a9; }
+                    .button:hover {
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);    
+                    background-color: #6489f0;
+                    color: white; }
+         img { display: block;
+            margin-left: auto;
+            margin-right: auto;}
+            #borderimg { border: 10px solid transparent;
+                         padding: 15px;
+                         border-image: url(6-60233_space-borders-clipart-clip-black-and-white-space.png) 30 round; }
+         div { background-color: rgb(252, 196, 205);
+                  width: 300px;
+                  border: 15px solid red;
+                  padding: 50px;
+                  margin: 50px;
+                  margin-left: 740px; }
+            h1 { text-align: center; }
+            p  { text-align: center; }
+            ul { text-align: center; }
+            h2 { text-align: Center; }
+        </style>
+     </head>
+     <!--The body tag contains the content that will be displayed on the page -->
+    <body>
+        <!--this calls out border from the <style> in the head! -->
+        <h1 id="borderimg"> Time for Lift-Off!</h1> 
+        <!-- P tag is for the paragraph! -->
+        <p> We will take off with our first launch! </p>
+        <!-- This is a sub-heading, usually smaller than the H1 tag -->
+        <h2> I'm so excited you could be with us. </h2> 
+        <!--This is what calls the button, and when clicked on it sends to link (Casino assignment)-->
+        <p>go to: <a href="file:///C:/Users/SKYBAUMG/Documents/Intro%20to%20Programming/Building%20Blocks-%20Space%20Base%20-%20Functions/index.html" class="button">Casino Bight</a> </p>
+        <p>OR</p>
+       <div> <h1> Choose your Ship: </h1> </div>
+        <!-- ul element represents a list of items, it makes a list! it stands of "Un-ordered List" -->
+            <ul id="borderimg">
+            <!-- li is the items in your list, it stands for "List Item"-->
+                <li> Millennium Falcon </li>
+                <li> Naboo Royal Cruiser </li>
+                <li> Razor Crest </li>
+                <li> X-Wing </li>
+        
+        </ul>
+        <!-- This is the show that the counter will be referred back to continuously, itll be pulled from here! -->
+        <p id="counter"></p>  
+        <!--Now I will try this code for Javascript and place in the timer for Blast off! -->
+    <script>
+    let currTime = 15;
+    setTimeout(CountDown, 0000)
+    setTimeout(CountDown, 5000)
+    setTimeout(CountDown, 10000)
+    setTimeout(CountDown, 15000)
+function CountDown(){ //This defines the function of a countdown!
+        if(currTime == 0){ //If the statement is "true", itll show the alert box saying "blast off" at 0 and pop up the image
+                alert("Blast off!!");
+                document.getElementById("counter").innerHTML = ("Countdown: " + currTime);
+                show_image('https://static.wikia.nocookie.net/starwars/images/a/ae/Hyperspace_falcon.png/revision/latest?cb=20130312014242', 1200, 600, 'LOGO');
+        }
+        else{//When the statement is "false" it will show an alternative- I have down 'LOGO' so itll pop up the word LOGO in its place :)
+                document.getElementById("counter").innerHTML = ("Countdown: "+ currTime);
+        }
+        currTime -= 5;}
+//this function prints out the picture by taking 4 variables as parameters: src= Source of the image, Width & Height is the size of the image, alt= the alternative for the image 
+function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+    //This is what makes it show up on the page within the Body Tag!
+    document.body.appendChild(img);}
+        </script>
+    
+    </body>
+<!-- The page ends here -->
+</html>

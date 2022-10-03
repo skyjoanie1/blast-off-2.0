@@ -1,0 +1,6 @@
+html {
+    height: 100%;
+}
+body {
+    width: 100%;
+    background-image: linear-gradient(to bottom right, rgb(178, 69, 252), rgb(101, 173, 255) );}
